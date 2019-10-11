@@ -1,5 +1,8 @@
 package edu.cnm.deepdive;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * This class contains stubs of the {@link #buildLinearStaircase(int)} and
  * {@link #buildFibonacciStaircase(int)} methods. Implementation of these
@@ -30,6 +33,19 @@ public class Staircase {
    * @return        array of length <code>height</code>.
    */
   public static String[] buildLinearStaircase(int height) {
+    StringBuilder stringBuilder = new StringBuilder();
+    List<String> ladder = new ArrayList<>();
+
+    for (int i = 1; i < height; i++) {
+      String str = "";
+
+      for (int j = 0; j < height - i; j++) {
+        str+=" ";
+      }
+      for (int k = 0; k < i; k++) {
+        str+="*";
+      }
+    }
     return null; // TODO Replace this line with implementation.
   }
 
