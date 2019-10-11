@@ -22,15 +22,14 @@ public class Staircase {
   /* BASIC PROBLEM */
 
   /**
-   * Constructs and returns an array of strings, where the first element is the
-   * top step of the staircase, containing a single asterisk (*), right-aligned
-   * (that is, padded on the left with spaces, as necessary), and each
-   * successive element is a string containing one more asterisk than the
-   * previous. The final string in the array should have <code>height</code>
-   * asterisk characters, without any leading spaces.
+   * Constructs and returns an array of strings, where the first element is the top step of the
+   * staircase, containing a single asterisk (*), right-aligned (that is, padded on the left with
+   * spaces, as necessary), and each successive element is a string containing one more asterisk
+   * than the previous. The final string in the array should have <code>height</code> asterisk
+   * characters, without any leading spaces.
    *
-   * @param height  staircase height (number of steps).
-   * @return        array of length <code>height</code>.
+   * @param height staircase height (number of steps).
+   * @return array of length <code>height</code>.
    */
   public static String[] buildLinearStaircase(int height) {
     StringBuilder stringBuilder = new StringBuilder();
@@ -40,10 +39,10 @@ public class Staircase {
       String str = "";
 
       for (int j = 0; j < height - i; j++) {
-        str+=" ";
+        str += " ";
       }
       for (int k = 0; k < i; k++) {
-        str+="*";
+        str += "*";
       }
     }
     return null; // TODO Replace this line with implementation.
@@ -52,21 +51,24 @@ public class Staircase {
   /* EXTRA CREDIT PROBLEM */
 
   /**
-   * Constructs and returns an array of strings, where the first element is the
-   * top step of the staircase, containing a single asterisk (*), right-aligned
-   * (that is, padded on the left with spaces, as necessary); the second element
-   * also has a single asterisk, right-aligned (left-padded); each
-   * successive element is a string containing a number of asterisks equal to
-   * the sum of the number of asterisks in the previous 2 elements. For example,
-   * the 3<sup>rd</sup> element will have 1 + 1 = 2 asterisks; the
-   * 4<sup>th</sup> will have 2 + 1 = 3 asterisks; etc. The last element of the
-   * array should contain nothing but asterisks.
+   * Constructs and returns an array of strings, where the first element is the top step of the
+   * staircase, containing a single asterisk (*), right-aligned (that is, padded on the left with
+   * spaces, as necessary); the second element also has a single asterisk, right-aligned
+   * (left-padded); each successive element is a string containing a number of asterisks equal to
+   * the sum of the number of asterisks in the previous 2 elements. For example, the 3<sup>rd</sup>
+   * element will have 1 + 1 = 2 asterisks; the 4<sup>th</sup> will have 2 + 1 = 3 asterisks; etc.
+   * The last element of the array should contain nothing but asterisks.
    *
-   * @param height  staircase height (number of steps).
-   * @return        array of length <code>height</code>.
+   * @param height staircase height (number of steps).
+   * @return array of length <code>height</code>.
    */
   public static String[] buildFibonacciStaircase(int height) {
+    for (String s : staircase(height: 10)) {
+      System.out.println(s);
+    }
     return null; // TODO Replace this line with implementation for extra credit.
   }
 
+  private static void staircase(int height) {
+  }
 }
